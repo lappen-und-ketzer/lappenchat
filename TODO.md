@@ -1,6 +1,6 @@
 # TODO
 
 ## Features
- - [ ]  Unix networking
+ - [ ]  POSIX networking
  - [ ]  IPv6
  - [ ]  Bluetooth
