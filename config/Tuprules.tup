@@ -1,0 +1,7 @@
+ifdef NETWORK_API
+	NETWORK_API=@(NETWORK_API)
+else
+	ifeq ($(TARGET),win32)
+		NETWORK_API=winsock2
+	endif
+endif

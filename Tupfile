@@ -1,0 +1,9 @@
+include_rules
+
+: winsock2.c |> !cc |> {libs}
+
+: lchat-client.c | config/<config_h> |> !cc |> {lchat_client_obj}
+: {lchat_client_obj} {libs} |> !ld |> lchat-client$(PROGRAM_SUFFIX)
+
+: lchat-server.c | config/<config_h> |> !cc |> {lchat_server_obj}
+: {lchat_server_obj} {libs} |> !ld |> lchat-server$(PROGRAM_SUFFIX)
